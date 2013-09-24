@@ -3,6 +3,10 @@ include ../makedefs
 
 LIB = $(OPENEAAGLES_LIB_DIR)/liboeHla.a
 
+#CPPFLAGS += -I$(HLA_INC_DIR)
+CPPFLAGS += -DRTI_USES_STD_FSTREAM
+#CPPFLAGS += -DEAAGLES_WITH_HLA -DRTI_USES_STD_FSTREAM -I$(RTI_HOME)/$(RTI_BUILD_TYPE)/include
+
 OBJS =  \
 	$(LIB)(Ambassador.o) \
 	$(LIB)(hlaFF.o) \
@@ -11,10 +15,7 @@ OBJS =  \
 
 SUBDIRS = rprFom
 
-#CPPFLAGS += -DEAAGLES_WITH_HLA -DRTI_USES_STD_FSTREAM -I$(RTI_HOME)/$(RTI_BUILD_TYPE)/include
-
-#all: subdirs ${OBJS} 
-all: ${OBJS} 
+all: subdirs ${OBJS} 
 
 subdirs:
 	for subdir in $(SUBDIRS); do \

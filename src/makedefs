@@ -52,6 +52,13 @@ JOYSTICKDEVICE = 1
 JSBSIM_INC_DIR = $(OE_3RD_PARTY_ROOT)/include/JSBSim
 
 # ---
+# HLA include directory
+# ---
+#HLA_ROOT = /home/me/hla-rti/certi-build_v3.4.2cvs
+#HLA_INC_DIR = $(HLA_ROOT)/include
+#HLA_INC_DIR = /usr/local/include
+
+# ---
 # Optimize?
 # ---
 CPPFLAGS += -g -O2
@@ -62,3 +69,4 @@ CPPFLAGS += -g -O2
 CPPFLAGS += -fPIC
 CPPFLAGS += -I$(OE_ROOT)/include -I$(OE_3RD_PARTY_ROOT)/include -pthread
 CPPFLAGS += -Wno-long-long -Wall
+
