@@ -30,23 +30,23 @@ public:
 public:
    Nib(const Simulation::NetIO::IoType ioType);
 
-   unsigned short getWeaponFireEvent() const       { return fireEvent; }
+   unsigned short getWeaponFireEvent() const                  { return fireEvent; }
    virtual void setWeaponFireEvent(const unsigned short e);
 
    // Site & App IDs
-   unsigned short getSiteID() const                { return siteID; }
+   unsigned short getSiteID() const                           { return siteID; }
    virtual void setSiteID(const unsigned short v);
-   unsigned short getApplicationID() const         { return appID; }
+   unsigned short getApplicationID() const                    { return appID; }
    virtual void setApplicationID(const unsigned short v);
 
    // Standard (DIS) entity type codes 
-   unsigned char getEntityKind() const      { return disKind; }                 // DIS kind type code (or 255 if not valid)
-   unsigned char getEntityDomain() const    { return disDomain; }               // DIS domain type code 
-   unsigned short getEntityCountry() const  { return disCountry; }              // DIS country type code
-   unsigned char getEntityCategory() const  { return disCategory; }             // DIS category type code
+   unsigned char getEntityKind() const         { return disKind; }              // DIS kind type code (or 255 if not valid)
+   unsigned char getEntityDomain() const       { return disDomain; }            // DIS domain type code 
+   unsigned short getEntityCountry() const     { return disCountry; }           // DIS country type code
+   unsigned char getEntityCategory() const     { return disCategory; }          // DIS category type code
    unsigned char getEntitySubcategory() const  { return disSubcategory; }       // DIS subcategory type code
-   unsigned char getEntitySpecific() const  { return disSpecific; }             // DIS specific type code
-   unsigned char getEntityExtra() const     { return disExtra; }                // DIS extra type code
+   unsigned char getEntitySpecific() const     { return disSpecific; }          // DIS specific type code
+   unsigned char getEntityExtra() const        { return disExtra; }             // DIS extra type code
 
    // Sets the standard (DIS) entity type codes
    virtual bool setEntityType(
@@ -94,7 +94,7 @@ private:
    unsigned char  disSpecific;      // DIS specific code
    unsigned char  disExtra;         // DIS extra code
 
-   BaseEntity* baseEntity; // The object's data
+   BaseEntity* baseEntity;         // The object's data
    double geodPos[3];              // Geodetic position of entity
    unsigned short fireEvent;       // Weapon fire event (for Weapon type objects)
 
