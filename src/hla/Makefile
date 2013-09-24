@@ -1,17 +1,20 @@
 #
 include ../makedefs
 
-LIB = $(EAAGLES_LIB_DIR)/libHla.a
+LIB = $(OPENEAAGLES_LIB_DIR)/liboeHla.a
+
 OBJS =  \
-	$(LIB)(BaseAmbassador.o) \
-	$(LIB)(HlaIO.o) \
-	$(LIB)(hlaFF.o)
+	$(LIB)(Ambassador.o) \
+	$(LIB)(hlaFF.o) \
+	$(LIB)(NetIO.o) \
+	$(LIB)(Nib.o)
 
-SUBDIRS = mc02_fom
+SUBDIRS = rprFom
 
-CPPFLAGS += -DEAAGLES_WITH_HLA -DRTI_USES_STD_FSTREAM -I$(RTI_HOME)/$(RTI_BUILD_TYPE)/include
+#CPPFLAGS += -DEAAGLES_WITH_HLA -DRTI_USES_STD_FSTREAM -I$(RTI_HOME)/$(RTI_BUILD_TYPE)/include
 
-all: subdirs ${OBJS} 
+#all: subdirs ${OBJS} 
+all: ${OBJS} 
 
 subdirs:
 	for subdir in $(SUBDIRS); do \
@@ -26,3 +29,4 @@ clean:
 	    (cd $$subdir && $(MAKE) $@) || exit 1; \
 	done
 	-rm -f $(LIB)
+
