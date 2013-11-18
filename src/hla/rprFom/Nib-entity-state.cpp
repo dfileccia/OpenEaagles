@@ -46,7 +46,7 @@ void Nib::reflectAttributeValues(const RTI::AttributeHandleValuePairSet& theAttr
             case NetIO::ENTITY_IDENTIFIER_AI : {
                EntityIdentifierStruct* net = (EntityIdentifierStruct*) &netBuffer;
 
-               Basic::NetHandler::fromNetOrder(&baseEntity->entityIdentifier.federateIdentifier.applicationID, net->federateIdentifier.applicationID );                
+               Basic::NetHandler::fromNetOrder(&baseEntity->entityIdentifier.federateIdentifier.applicationID, net->federateIdentifier.applicationID );
                Basic::NetHandler::fromNetOrder(&baseEntity->entityIdentifier.federateIdentifier.siteID, net->federateIdentifier.siteID );
                Basic::NetHandler::fromNetOrder(&baseEntity->entityIdentifier.entityNumber, net->entityNumber );
 
@@ -66,7 +66,7 @@ void Nib::reflectAttributeValues(const RTI::AttributeHandleValuePairSet& theAttr
             }
             break;
 
-            // Update Spacial
+            // Update Spatial
             case NetIO::SPATIAL_AI : {
 
                // NIB's base entity structure pointers
@@ -433,7 +433,7 @@ void Nib::updateBasicEntity(
          //std::cout << "Send Federate ID: (" << entityId->entityNumber << "," << entityId->federateIdentifier.applicationID << "," << entityId->federateIdentifier.siteID << ")" << std::endl;
 
          EntityIdentifierStruct netBuffer;
-         Basic::NetHandler::toNetOrder(&netBuffer.federateIdentifier.applicationID, entityId->federateIdentifier.applicationID );                
+         Basic::NetHandler::toNetOrder(&netBuffer.federateIdentifier.applicationID, entityId->federateIdentifier.applicationID );
          Basic::NetHandler::toNetOrder(&netBuffer.federateIdentifier.siteID, entityId->federateIdentifier.siteID );
          Basic::NetHandler::toNetOrder(&netBuffer.entityNumber, entityId->entityNumber );
          attrs->add(netIO->getObjectAttributeHandle(
@@ -553,9 +553,9 @@ void Nib::updateBasicEntity(
             VelocityVectorStruct* velocityVector = &spatialRvw->velocityVector;
             VelocityVectorStruct* netVelocityVector = &netSpatialRvw->velocityVector;
 
-            velocityVector->xVelocity = geocVel[Basic::Nav::IX];
-            velocityVector->yVelocity = geocVel[Basic::Nav::IY];
-            velocityVector->zVelocity = geocVel[Basic::Nav::IZ];
+            velocityVector->xVelocity = RTI::Float(geocVel[Basic::Nav::IX]);
+            velocityVector->yVelocity = RTI::Float(geocVel[Basic::Nav::IY]);
+            velocityVector->zVelocity = RTI::Float(geocVel[Basic::Nav::IZ]);
 
             Basic::NetHandler::toNetOrder(&netVelocityVector->xVelocity, velocityVector->xVelocity);
             Basic::NetHandler::toNetOrder(&netVelocityVector->yVelocity, velocityVector->yVelocity);
@@ -567,9 +567,9 @@ void Nib::updateBasicEntity(
             AccelerationVectorStruct* accelerationVector = &spatialRvw->accelerationVector;
             AccelerationVectorStruct* netAccelerationVector = &netSpatialRvw->accelerationVector;
 
-            accelerationVector->xAcceleration = geocAcc[Basic::Nav::IX];
-            accelerationVector->yAcceleration = geocAcc[Basic::Nav::IY];
-            accelerationVector->zAcceleration = geocAcc[Basic::Nav::IZ];
+            accelerationVector->xAcceleration = RTI::Float(geocAcc[Basic::Nav::IX]);
+            accelerationVector->yAcceleration = RTI::Float(geocAcc[Basic::Nav::IY]);
+            accelerationVector->zAcceleration = RTI::Float(geocAcc[Basic::Nav::IZ]);
 
             Basic::NetHandler::toNetOrder(&netAccelerationVector->xAcceleration, accelerationVector->xAcceleration);
             Basic::NetHandler::toNetOrder(&netAccelerationVector->yAcceleration, accelerationVector->yAcceleration);
@@ -585,9 +585,9 @@ void Nib::updateBasicEntity(
             LCreal geocAngles[3] = { 0, 0, 0 };
             Basic::Nav::getGeocAngle(simCoord, angles.ptr(), geocAngles);
 
-            orientation->phi = geocAngles[Basic::Nav::IPHI];
-            orientation->theta = geocAngles[Basic::Nav::ITHETA];
-            orientation->psi = geocAngles[Basic::Nav::IPSI];
+            orientation->phi   = RTI::Float(geocAngles[Basic::Nav::IPHI]);
+            orientation->theta = RTI::Float(geocAngles[Basic::Nav::ITHETA]);
+            orientation->psi   = RTI::Float(geocAngles[Basic::Nav::IPSI]);
 
             Basic::NetHandler::toNetOrder(&netOrientation->phi, orientation->phi);
             Basic::NetHandler::toNetOrder(&netOrientation->theta, orientation->theta);
