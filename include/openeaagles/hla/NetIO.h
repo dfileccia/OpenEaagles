@@ -25,7 +25,7 @@ class Nib;
 // Form Name: HlaNetIO
 // Slots:
 //      fedFile:            ! FED file name
-//      regulatingTime:     ! Requlating time flag
+//      regulatingTime:     ! Regulating time flag
 //      constrainedTime:    ! constrained time flag
 //
 //==============================================================================

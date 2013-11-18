@@ -32,7 +32,7 @@ bool NetIO::publishAndSubscribeMunitionDetonation()
    try {
 
       // ---
-      // Munition detonation Interaction class handle and parmaeter handles
+      // Munition detonation Interaction class handle and parameter handles
       // ---
       {
          RTI::InteractionClassHandle handle =
@@ -345,7 +345,7 @@ bool Nib::munitionDetonationMsgFactory(const LCreal)
       sizeof(EventIdentifierStruct) );
 
    // ---
-   // Location & Velociy
+   // Location & Velocity
    // ---
    {
 	  osg::Vec3d geocPos = getDrPosition();
@@ -375,7 +375,7 @@ bool Nib::munitionDetonationMsgFactory(const LCreal)
 
 
    // ---
-   // Munition Object identfiers:
+   // Munition Object identifiers:
    // ---
    {
       RTIObjectIdStruct munitionObjectIdentifier;
@@ -391,7 +391,7 @@ bool Nib::munitionDetonationMsgFactory(const LCreal)
    }
 
    // ---
-   // Firing Object identfier:
+   // Firing Object identifier:
    //
    // Get the firing player and its NIB.
    //   First check to see if it's an IPlayer from an HLA network.
@@ -424,7 +424,7 @@ bool Nib::munitionDetonationMsgFactory(const LCreal)
    }
 
    // ---
-   // Target Object identfier:
+   // Target Object identifier:
    //
    // Get the target player and its NIB.
    //   First check to see if it's an IPlayer from an HLA network.

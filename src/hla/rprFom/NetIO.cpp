@@ -99,7 +99,7 @@ void NetIO::deleteData()
 }
 
 //------------------------------------------------------------------------------
-// getNumberOfObjectClasses() -- Number of object classses we're using
+// getNumberOfObjectClasses() -- Number of object classes we're using
 //------------------------------------------------------------------------------
 unsigned int NetIO::getNumberOfObjectClasses() const
 {
@@ -115,7 +115,7 @@ unsigned int NetIO::getNumberOfObjectAttributes() const
 }
 
 //------------------------------------------------------------------------------
-// getNumberOfOInteractionClasses() -- Number of interaction classses we're using
+// getNumberOfOInteractionClasses() -- Number of interaction classes we're using
 //------------------------------------------------------------------------------
 unsigned int NetIO::getNumberOfOInteractionClasses() const
 {
@@ -596,7 +596,7 @@ bool NtmInputNode::add2OurLists(Simulation::Ntm* const ntm)
             if (!alreadyExists) {
                NtmInputNode* newNode = new NtmInputNode( (level+1), nextLevelCode, disNtm );
                subnodeList->put(newNode);
-               newNode->unref();   // ref()'d when put into the subnodelist
+               newNode->unref();   // ref()'d when put into the subnode list
                ok = true;
             }
             else if (isMessageEnabled(MSG_WARNING)) {
@@ -633,7 +633,7 @@ bool NtmInputNode::add2OurLists(Simulation::Ntm* const ntm)
             NtmInputNode* newNode = new NtmInputNode( (level+1), nextLevelCode );
             subnodeList->put(newNode);
             ok = newNode->add2OurLists(disNtm);
-            newNode->unref();   // ref()'d when put into the subnodelist
+            newNode->unref();   // ref()'d when put into the subnode list
          }
       }
 

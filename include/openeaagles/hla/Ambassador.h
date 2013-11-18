@@ -18,7 +18,7 @@ class NetIO;
 // Class: Ambassador
 // Base class: RTI::FederateAmbassador -> Hla::Ambassador
 //
-// Description: Basic ambassador to the Federation.  Our federate unqiue
+// Description: Basic ambassador to the Federation.  Our federate unique
 //              ambassadors will be derived from this class.  (Notes on
 //              parameter passing are in <federateAmbServices.hh>, which
 //              is included in <RTI.hh>)

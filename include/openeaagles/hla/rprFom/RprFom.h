@@ -696,8 +696,8 @@ struct VectoringNozzleSystemDataStruct {
 // ---
 // Base Entity Structure (S)
 //
-// "A base class of aggregate and discrete scenaro domain participants. The
-// BaseEntity class is characterised by being located at a particular location
+// "A base class of aggregate and discrete scenario domain participants. The
+// BaseEntity class is characterized by being located at a particular location
 // in space and independently movable, if capable of movement at all. It
 // specifically excludes elements normally considered to be a component of
 // another element. The BaseEntity class is intended to be a container for
@@ -957,7 +957,7 @@ public:
 // Ground Vehicle Structure (S)
 //  -- subclass of Platform
 //
-// "A platform entity that operates wholy on the surface of the earth."
+// "A platform entity that operates wholly on the surface of the earth."
 // ---
 class GroundVehicle : public Platform {
     DECLARE_SUBCLASS(GroundVehicle,Platform)
@@ -1014,7 +1014,7 @@ public:
 // Surface Vessel Structure (PS)
 //  -- subclass of Platform
 //
-// "A platform entity that operates wholy on the surface of the sea."
+// "A platform entity that operates wholly on the surface of the sea."
 // ---
 class SurfaceVessel : public Platform {
     DECLARE_SUBCLASS(SurfaceVessel,Platform)

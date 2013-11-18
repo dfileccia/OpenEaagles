@@ -19,7 +19,7 @@ class Ambassador;
 //==============================================================================
 // Class:       Hla::Nib
 // Base class:  Basic::Object -> Simulation::Nib -> Hla::Nib
-// Description: Unqiue NIB for HLA support.
+// Description: Unique NIB for HLA support.
 //
 // Note: updateRequired[] flags are used ...
 //        -- (input)  an attribute has received a value (via reflectAttributeValues())
@@ -32,7 +32,7 @@ class Nib : public Simulation::Nib
 public:
    Nib(const Simulation::NetIO::IoType ioType);
 
-   // Returns true if the object has been registerd
+   // Returns true if the object has been registered
    bool isRegistered() const                       { return (handle != 0); }
 
    // RTI Object Handle

@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------
-// hlaFormFunc() -- parser form function for HLA networks
+// rprFormFunc() -- parser form function for HLA RPR FOM
 //------------------------------------------------------------------------------
 #ifndef __Eaagles_Network_Hla_RprFom_FormFunc_H__
 #define __Eaagles_Network_Hla_RprFom_FormFunc_H__

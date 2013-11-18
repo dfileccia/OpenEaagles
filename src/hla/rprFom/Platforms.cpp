@@ -141,7 +141,7 @@ bool NetIO::publishAndSubscribePlatforms()
    if (ok) {
       try {
 
-         // General purpuse attribue handle set used to publish and subscribe to class attribues
+         // General purpose attribute handle set used to publish and subscribe to class attributes
          RTI::AttributeHandleSet* attrs =
             RTI::AttributeHandleSetFactory::create( NUM_OBJECT_ATTRIBUTES );
 
@@ -283,7 +283,7 @@ void Nib::reflectAttributeValues(const RTI::AttributeHandleValuePairSet& theAttr
                // Dead reckoning 
                spatial->deadReckoningAlgorithm = netSpatial->deadReckoningAlgorithm;
 
-               // find network components based on dead reckoning alg
+               // find network components based on dead reckoning algorithm
                // (and set the isFrozen flag)
                switch (spatial->deadReckoningAlgorithm) {
 
@@ -595,10 +595,10 @@ bool Nib::entityStateManager(const LCreal curExecTime)
 // updateBasicEntity() -- (Output support)
 //    -- sets the BasicEntity attribute values that need to be updated
 //
-//    -- We send all published BasicEntity attributes everytime.
+//    -- We send all published BasicEntity attributes every time.
 //
 //       The function isPlayerStateUpdateRequired() checking if the player's state
-//       needs to be re-setn.  Therefore, we're not check the individual update
+//       needs to be resent.  Therefore, we're not check the individual update
 //       required flags with isAttributeUpdateRequired(), but we do clear them
 //       with setAttributeUpdateRequiredFlag().
 //
@@ -775,7 +775,7 @@ void Nib::updateBasicEntity(
             OrientationStruct* orientation = &spatialRvw->orientation;
             OrientationStruct* netOrientation = &netSpatialRvw->orientation;
 
-            // Convert euler angles to geocentric angles
+            // Convert Euler angles to geocentric angles
             LCreal geocAngles[3] = { 0, 0, 0 };
             Basic::Nav::getGeocAngle(simCoord, angles.ptr(), geocAngles);
 
@@ -817,7 +817,7 @@ void Nib::updateBasicEntity(
 // updatePhysicalEntity() -- (Output support)
 //    -- sets the PhysicalEntity attribute values that need to be updated
 //
-//    -- We send all published PhysicalEntity attributes everytime.
+//    -- We send all published PhysicalEntity attributes every time.
 //       The function isPlayerStateUpdateRequired() check if the player's state
 //       needs to be re-sent.  Therefore, we're not checking the individual update
 //       required flags with isAttributeUpdateRequired(), but we do clear them
@@ -874,7 +874,7 @@ void Nib::updatePhysicalEntity(
 // updatePlatform() -- (Output support)
 //    -- sets the Platform attribute values that need to be updated
 //
-//    -- We send all published Platform attributes everytime.
+//    -- We send all published Platform attributes every time.
 //       The function isPlayerStateUpdateRequired() check if the player's state
 //       needs to be re-sent.  Therefore, we're not checking the individual update
 //       required flags with isAttributeUpdateRequired(), but we do clear them

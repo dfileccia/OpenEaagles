@@ -29,9 +29,17 @@ OE3rdPartyIncPath = OE_3RD_PARTY_ROOT.."/include"
 --
 -- directory location for HLA include and library paths
 --
-HLA_ROOT = "../../../CERTI_v3.4.0"
-HLAIncPath = HLA_ROOT.."/include"
-HLALibPath = HLA_ROOT.."/lib"
+HLA_ROOT = "../../../portico-2.0.0"
+HLAIncPath = HLA_ROOT.."/include/hla13"
+if (_ACTION == "vs2008") then
+  HLALibPath = HLA_ROOT.."/lib/vc9"
+end
+if (_ACTION == "vs2010") then
+  HLALibPath = HLA_ROOT.."/lib/vc10"
+end
+if (_ACTION == "vs2012") then
+  HLALibPath = HLA_ROOT.."/lib/vc11"
+end
 
 --
 -- determine target directories for project/solution files and 

@@ -25,7 +25,7 @@ IMPLEMENT_PARTIAL_SUBCLASS(NetIO,"HlaNetIO")
 //------------------------------------------------------------------------------
 BEGIN_SLOTTABLE(NetIO)
    "fedFile",          // 1) FED file name
-   "regulatingTime",   // 2) Requlating time flag
+   "regulatingTime",   // 2) Regulating time flag
    "constrainedTime",  // 3) constrained time flag
 END_SLOTTABLE(NetIO)
 
@@ -516,7 +516,7 @@ void NetIO::netInputHander()
 }
 
 //------------------------------------------------------------------------------
-// initNetwork() -- Init the multicast network
+// initNetwork() -- Initialize the multicast network
 //------------------------------------------------------------------------------
 bool NetIO::initNetwork()
 {
@@ -952,7 +952,7 @@ Nib* NetIO::findNibByObjectName(const char* name, const IoType ioType)
 }
 
 //------------------------------------------------------------------------------
-// Destory the NIB s
+// Destroy the NIB s
 //------------------------------------------------------------------------------
 void NetIO::destroyInputNib(Simulation::Nib* const nib)
 {
