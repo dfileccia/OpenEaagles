@@ -52,11 +52,11 @@ JOYSTICKDEVICE = 1
 JSBSIM_INC_DIR = $(OE_3RD_PARTY_ROOT)/include/JSBSim
 
 # ---
-# HLA include directory
+# HLA RTI paths
 # ---
-#HLA_ROOT = /home/me/hla-rti/certi-build_v3.4.2cvs
-#HLA_INC_DIR = $(HLA_ROOT)/include
-#HLA_INC_DIR = /usr/local/include
+HLA_ROOT = /home/me/oe/portico-2.0.0
+HLA_INC_DIR = $(HLA_ROOT)/include/hla13
+HLA_LIB_DIR = $(HLA_ROOT)/lib/gcc4
 
 # ---
 # Optimize?

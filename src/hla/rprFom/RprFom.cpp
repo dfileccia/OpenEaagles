@@ -43,7 +43,7 @@ PhysicalEntity::PhysicalEntity() :
          hasFuelSupplyCap(RTI::RTI_FALSE), hasRecoveryCap(RTI::RTI_FALSE),
          hasRepairCap(RTI::RTI_FALSE), immobilized(RTI::RTI_FALSE),
          infraredSignatureIndex(0), isConcealed(RTI::RTI_FALSE),
-         marking(), liveEntityMeasuredSpeed(0),
+         liveEntityMeasuredSpeed(0), marking(),
          powerPlantOn(RTI::RTI_FALSE), propulsionSystemsData(),
          radarCrossSectionSignatureIndex(0), smokePlumePresent(RTI::RTI_FALSE),
          tentDeployed(RTI::RTI_FALSE), trailingEffectsCode(NO_TRAIL),
